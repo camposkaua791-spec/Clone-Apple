@@ -26,39 +26,41 @@ header{
 }
 
 nav{
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    padding:0 20px;
+    justify-content:center;
+    gap:22px;
     height:44px;
 }
 
 .logo{
-    color:#1d1d1f;
+    width:28px;
+    height:44px;
     display:flex;
     align-items:center;
     justify-content:center;
     cursor:pointer;
-    width:40px;
 }
 
 .logo svg{
-    display:block;
+    width:20px;
+    height:20px;
+    fill:#1d1d1f;
 }
 
 nav ul{
-    display:flex;
     list-style:none;
-    gap:24px;
+    display:flex;
+    align-items:center;
+    gap:22px;
 }
 
 nav ul li a{
     text-decoration:none;
     color:#1d1d1f;
     font-size:12px;
-    font-weight:400;
 }
 
 nav ul li a:hover{
@@ -68,16 +70,25 @@ nav ul li a:hover{
 .icones{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:16px;
 }
 
 .icones span{
-    color:#1d1d1f;
     display:flex;
     align-items:center;
     justify-content:center;
     cursor:pointer;
-    width:20px;
+}
+
+.icones svg{
+    width:18px;
+    height:18px;
+    fill:#1d1d1f;
+}
+
+.logo:hover svg,
+.icones span:hover svg{
+    fill:#0066cc;
 }
 
 .evento{
@@ -147,9 +158,9 @@ nav ul li a:hover{
     min-height:650px;
     text-align:center;
     padding:40px;
+    border-radius:18px;
     overflow:hidden;
     transition:0.3s;
-    border-radius:18px;
 }
 
 .card:hover{
@@ -185,16 +196,16 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .evento{
+        height:650px;
+    }
+
     .conteudo h1{
         font-size:42px;
     }
 
     .conteudo p{
         font-size:22px;
-    }
-
-    .evento{
-        height:650px;
     }
 
     .banner h1{
