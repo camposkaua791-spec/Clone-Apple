@@ -19,18 +19,19 @@ header{
 }
 
 nav{
-    max-width:1250px;
+    max-width:1400px;
     margin:auto;
-    height:44px;
+    height:48px;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    padding:0 15px;
+    justify-content:center;
+    gap:6px;
+    padding:0 10px;
 }
 
 .logo{
-    width:45px;
-    height:44px;
+    width:50px;
+    height:48px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -38,8 +39,8 @@ nav{
 }
 
 .logo svg{
-    width:28px;
-    height:28px;
+    width:34px;
+    height:34px;
     fill:#1d1d1f;
     transition:.3s;
 }
@@ -49,12 +50,11 @@ nav{
 }
 
 nav ul{
-    flex:1;
     display:flex;
     align-items:center;
     justify-content:center;
     list-style:none;
-    gap:14px;
+    gap:12px;
 }
 
 nav ul li a{
@@ -71,9 +71,8 @@ nav ul li a:hover{
 .icones{
     display:flex;
     align-items:center;
-    justify-content:flex-end;
-    gap:8px;
-    width:60px;
+    gap:6px;
+    margin-left:10px;
 }
 
 .icones span{
@@ -84,8 +83,8 @@ nav ul li a:hover{
 }
 
 .icones svg{
-    width:24px;
-    height:24px;
+    width:30px;
+    height:30px;
     fill:#1d1d1f;
     transition:.3s;
 }
@@ -191,8 +190,23 @@ footer{
 
 @media(max-width:900px){
 
+    nav{
+        justify-content:space-between;
+        padding:0 15px;
+    }
+
     nav ul{
         display:none;
+    }
+
+    .logo svg{
+        width:28px;
+        height:28px;
+    }
+
+    .icones svg{
+        width:26px;
+        height:26px;
     }
 
     .grid{
@@ -217,15 +231,5 @@ footer{
 
     .banner h3{
         font-size:22px;
-    }
-
-    .logo svg{
-        width:24px;
-        height:24px;
-    }
-
-    .icones svg{
-        width:22px;
-        height:22px;
     }
 }
