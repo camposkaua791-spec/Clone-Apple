@@ -29,37 +29,55 @@ nav{
     max-width:1200px;
     margin:auto;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    padding:14px 20px;
+    justify-content:space-between;
+    padding:0 20px;
+    height:44px;
 }
 
 .logo{
-    font-size:22px;
+    color:#1d1d1f;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     cursor:pointer;
+    width:40px;
+}
+
+.logo svg{
+    display:block;
 }
 
 nav ul{
     display:flex;
     list-style:none;
-    gap:22px;
+    gap:24px;
 }
 
 nav ul li a{
     text-decoration:none;
     color:#1d1d1f;
-    font-size:13px;
+    font-size:12px;
+    font-weight:400;
 }
 
 nav ul li a:hover{
-    color:#0071e3;
+    color:#0066cc;
 }
 
 .icones{
     display:flex;
-    gap:18px;
+    align-items:center;
+    gap:20px;
+}
+
+.icones span{
+    color:#1d1d1f;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     cursor:pointer;
-    font-size:18px;
+    width:20px;
 }
 
 .evento{
@@ -75,11 +93,12 @@ nav ul li a:hover{
 
 .conteudo h1{
     font-size:72px;
+    margin-bottom:15px;
 }
 
 .conteudo p{
     font-size:28px;
-    margin-top:10px;
+    margin-bottom:10px;
 }
 
 .botao{
@@ -90,6 +109,7 @@ nav ul li a:hover{
     color:black;
     text-decoration:none;
     border-radius:30px;
+    font-weight:600;
 }
 
 .banner{
@@ -101,12 +121,13 @@ nav ul li a:hover{
 
 .banner h1{
     font-size:64px;
+    margin-bottom:10px;
 }
 
 .banner h3{
     font-size:30px;
     font-weight:400;
-    margin:20px 0;
+    margin-bottom:30px;
 }
 
 .banner img{
@@ -126,12 +147,18 @@ nav ul li a:hover{
     min-height:650px;
     text-align:center;
     padding:40px;
+    overflow:hidden;
+    transition:0.3s;
     border-radius:18px;
-    transition:.3s;
+}
+
+.card:hover{
+    transform:scale(1.02);
 }
 
 .card h2{
     font-size:42px;
+    margin-bottom:20px;
 }
 
 .card img{
@@ -141,9 +168,10 @@ nav ul li a:hover{
 }
 
 footer{
-    background:#f5f5f7;
     text-align:center;
     padding:40px;
+    background:#f5f5f7;
+    color:#666;
     margin-top:20px;
 }
 
@@ -157,15 +185,23 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .evento{
-        height:650px;
-    }
-
     .conteudo h1{
         font-size:42px;
     }
 
     .conteudo p{
+        font-size:22px;
+    }
+
+    .evento{
+        height:650px;
+    }
+
+    .banner h1{
+        font-size:42px;
+    }
+
+    .banner h3{
         font-size:22px;
     }
 }
