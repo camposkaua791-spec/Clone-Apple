@@ -1,5 +1,25 @@
 console.log("Apple Clone carregado");
 
+function pesquisar(){
+
+    const busca = prompt("Pesquisar:");
+
+    if(busca){
+        window.open(
+            "https://www.apple.com/br/search/" + busca,
+            "_blank"
+        );
+    }
+}
+
+function carrinho(){
+
+    window.open(
+        "https://www.apple.com/br/shop/bag",
+        "_blank"
+    );
+}
+
 const cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
@@ -20,30 +40,7 @@ window.addEventListener("scroll", () => {
 
     if(evento){
         evento.style.backgroundPositionY =
-            (window.scrollY * 0.3) + "px";
+        window.scrollY * 0.3 + "px";
     }
-
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-    link.addEventListener("click", function(e){
-
-        const destino = document.querySelector(
-            this.getAttribute("href")
-        );
-
-        if(destino){
-
-            e.preventDefault();
-
-            destino.scrollIntoView({
-                behavior:"smooth",
-                block:"start"
-            });
-
-        }
-
-    });
 
 });
