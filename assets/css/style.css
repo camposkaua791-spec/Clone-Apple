@@ -1,235 +1,733 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+* {
+    margin: 0;
+    padding: 1px;
+    box-sizing: border-box;
 }
 
-body{
-    background:#fff;
-    color:#1d1d1f;
+html {
+    scroll-behavior: smooth;
 }
 
-header{
-    background:#fff;
-    border-bottom:1px solid #e5e5e5;
-    position:sticky;
-    top:0;
-    z-index:1000;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #1d1d1f;
 }
 
-nav{
-    max-width:1400px;
-    margin:auto;
-    height:48px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:6px;
-    padding:0 10px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.logo{
-    width:50px;
-    height:48px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 48px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    backdrop-filter: blur(15px);
+
+    z-index: 1000;
 }
 
-.logo svg{
-    width:34px;
-    height:34px;
-    fill:#1d1d1f;
-    transition:.3s;
+.navbar {
+    max-width: 1000px;
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
 }
 
-.logo:hover svg{
-    fill:#0066cc;
+
+
+.logo {
+    font-size: 20px;
+    width: 25px;
 }
 
-nav ul{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    list-style:none;
-    gap:12px;
+.logo span {
+    font-size: 22px;
 }
 
-nav ul li a{
-    text-decoration:none;
-    color:#1d1d1f;
-    font-size:12px;
-    transition:.3s;
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+    font-size: 13px;
 }
 
-nav ul li a:hover{
-    color:#0066cc;
+.nav-links a {
+    transition: opacity 0.2s;
 }
 
-.icones{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    margin-left:10px;
+.nav-links a:hover {
+    opacity: 0.5;
 }
 
-.icones span{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
+.nav-icons {
+    display: flex;
+    gap: 18px;
 }
 
-.icones svg{
-    width:30px;
-    height:30px;
-    fill:#1d1d1f;
-    transition:.3s;
+.nav-icons button,
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    font-size: 18px;
 }
 
-.icones span:hover svg{
-    fill:#0066cc;
+.menu-button {
+    display: none;
 }
 
-.evento{
-    height:900px;
-    background:url('../img/brilhante.png') center center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    text-align:center;
-    padding-bottom:100px;
-    color:white;
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
 }
 
-.conteudo h1{
-    font-size:72px;
-    margin-bottom:15px;
+.button {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    transition: 0.3s;
 }
 
-.conteudo p{
-    font-size:28px;
-    margin-bottom:10px;
+.primary {
+    background: #0071e3;
+    color: white;
 }
 
-.botao{
-    display:inline-block;
-    margin-top:20px;
-    padding:14px 30px;
-    background:white;
-    color:black;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:600;
+.primary:hover {
+    background: #0077ed;
+    transform: scale(1.03);
 }
 
-.banner{
-    background:#fbfbfd;
-    text-align:center;
-    padding:80px 20px;
-    margin-top:12px;
+.secondary {
+    background-color: white;
+    color: black;
 }
 
-.banner h1{
-    font-size:64px;
-    margin-bottom:10px;
+.secondary:hover {
+    background: #0071e3;
+    color: white;
 }
 
-.banner h3{
-    font-size:30px;
-    font-weight:400;
-    margin-bottom:30px;
+.hero {
+    min-height: 750px;
+
+    margin-top: 48px;
+
+    background-image: url("../img/brilhante.png");
+
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
 }
 
-.banner img{
-    width:100%;
-    max-width:1000px;
+.hero-content {
+    margin-top: 250px;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    padding:12px;
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
 }
 
-.card{
-    background:#f5f5f7;
-    min-height:650px;
-    text-align:center;
-    padding:40px;
-    border-radius:18px;
-    overflow:hidden;
-    transition:.3s;
+.hero h2 {
+    font-size: 42px;
+    line-height: 1.05;
 }
 
-.card:hover{
-    transform:scale(1.02);
+.hero p {
+    font-size: 20px;
+    margin-top: 20px;
 }
 
-.card h2{
-    font-size:42px;
-    margin-bottom:20px;
+
+.product {
+    min-height: 693px;
+
+    padding: 80px 20px 0px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+    margin: 5px 0;
 }
 
-.card img{
-    width:100%;
-    max-width:500px;
-    margin-top:20px;
+.product-content {
+    position: relative;
+    z-index: 2;
 }
 
-footer{
-    text-align:center;
-    padding:40px;
-    background:#f5f5f7;
-    color:#666;
-    margin-top:20px;
+.product h2 {
+    font-size: 52px;
+    margin-bottom: 10px;
 }
 
-@media(max-width:900px){
+.product h3 {
+    font-size: 28px;
+    font-weight: normal;
+}
 
-    nav{
-        justify-content:space-between;
-        padding:0 15px;
+.product p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.mac-studio {
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+}
+
+.label {
+    color: #bf4800;
+    font-weight: bold;
+}
+
+
+.iphone {
+    background-image: url("../img/hero.png");
+    background-position: center;
+}
+
+.phone {
+    width: 190px;
+    height: 380px;
+
+    background: #111;
+
+    border: 7px solid #222;
+
+    border-radius: 35px;
+
+    margin-top: 50px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 27px;
+
+    background:
+        linear-gradient(
+            140deg,
+            #7b61ff,
+            #ff4d8d,
+            #ffb347
+        );
+}
+
+
+.mac {
+    background: rgb(245 245 247);
+    color: black;
+    background-image: url("../img/m6.png");
+    background-position: center;
+}
+
+.laptop {
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.laptop-screen {
+    width: 520px;
+    height: 320px;
+
+    background: #111;
+
+    border: 10px solid #333;
+
+    border-radius: 15px 15px 5px 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apple-symbol {
+    font-size: 70px;
+}
+
+.laptop-base {
+    width: 600px;
+    height: 20px;
+
+    background: #777;
+
+    border-radius: 0 0 10px 10px;
+}
+
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 5px;
+
+    margin-top: 5px;
+}
+
+
+.card {
+    min-height: 572px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    padding: 60px 20px 0px;
+
+    overflow: hidden;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.card h2 {
+    font-size: 40px;
+}
+
+.card p {
+    font-size: 19px;
+    margin-top: 12px;
+}
+
+.card-ipadair {
+    background-image: url("../img/tablet.png");
+    background-position: center;
+}
+
+.card-dark {
+    background: rgb(245 245 247);
+    color: black;
+}
+
+.card-airpodss {
+    background: #f5f5f7;
+}
+
+.card-white {
+    background: #f5f5f7;
+    color: rgb(0, 0, 0);
+}
+
+.card-iphone {
+    width:  100%;
+    height: 100%;
+    background-image: url("../img/iphone.png");
+    background-position: center;
+
+}
+
+.card-watch {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/relogio.png");
+    background-position: center;
+}
+
+.card-airpods {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fone.png");
+    background-position: center;
+
+}
+
+.card-macbookneo {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/macbook.png");
+    background-position: center;
+    
+}
+
+.card-macbookair {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/macbookl.png");
+    background-position: center;
+}
+
+.watch-label {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+.watch-device {
+    margin-top: 50px;
+
+    width: 180px;
+    height: 220px;
+
+    background: #222;
+
+    border-radius: 45px;
+
+    padding: 15px;
+}
+
+.watch-screen {
+    width: 100%;
+    height: 100%;
+
+    background: #050505;
+
+    border-radius: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 30px;
+}
+
+
+.airpods {
+    display: flex;
+
+    gap: 35px;
+
+    margin-top: 80px;
+}
+
+.earbud {
+    width: 70px;
+    height: 130px;
+
+    background: white;
+
+    border-radius: 40px 40px 25px 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+}
+
+.left {
+    transform: rotate(-10deg);
+}
+
+.right {
+    transform: rotate(10deg);
+}
+
+
+.footer {
+    background: #f5f5f7;
+
+    padding: 50px 20px ;
+
+    color: #555;
+}
+
+.footer-content {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 50px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-column h3 {
+    color: #222;
+
+    font-size: 14px;
+}
+
+.footer-column a {
+    font-size: 13px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    max-width: 1000px;
+
+    margin: 50px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #ccc;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+
+#topButton {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    color: #0071e3;
+}
+
+
+.apple-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 0 30px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.carousel-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 12px;
+    /* transform: translateX(calc(-(100% - 900px)/2)); */
+    transition: transform 0.7s ease;
+}
+
+.carousel-slide {
+    position: relative;
+    width: 900px;
+    height: 523px;
+}
+
+.carousel-slide img {
+    display: block;
+    width: 900px;
+    height: 523px;
+    object-fit: cover;
+}
+
+
+.carousel-content {
+    position: absolute;
+    left: 0;
+    bottom: 35px;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    color: white;
+    text-align: center;
+}
+
+.carousel-content button {
+    border: none;
+    background: white;
+    color: #222;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.carousel-content p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #999;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+}
+
+.dot.active {
+    width: 25px;
+    border-radius: 10px;
+    background: #555;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 48px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+
+        padding: 30px;
+
+        display: none;
     }
 
-    nav ul{
-        display:none;
+    .nav-links.active {
+        display: flex;
     }
 
-    .logo svg{
-        width:28px;
-        height:28px;
+    .menu-button {
+        display: block;
     }
 
-    .icones svg{
-        width:26px;
-        height:26px;
+    .nav-icons {
+        display: none;
     }
 
-    .grid{
-        grid-template-columns:1fr;
+
+    .hero {
+        min-height: 650px;
     }
 
-    .evento{
-        height:650px;
+    .hero h1 {
+        font-size: 45px;
     }
 
-    .conteudo h1{
-        font-size:42px;
+    .hero h2 {
+        font-size: 32px;
     }
 
-    .conteudo p{
-        font-size:22px;
+
+    .product h2 {
+        font-size: 40px;
     }
 
-    .banner h1{
-        font-size:42px;
+    .product h3 {
+        font-size: 23px;
     }
 
-    .banner h3{
-        font-size:22px;
+
+    .products-grid {
+        grid-template-columns: 1fr;
     }
+
+
+    .laptop-screen {
+        width: 320px;
+        height: 200px;
+    }
+
+    .laptop-base {
+        width: 360px;
+    }
+
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
 }
